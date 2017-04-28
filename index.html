@@ -1,0 +1,26 @@
+<html>
+<head>
+    <style type="text/css">
+        .star1, .star2
+        { display: inline-block; background: url('assets/star_sprite.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; cursor: pointer}
+
+        .star1 { background-position: -0px -0px; width: 64px; height: 64px; }
+        .star2 { background-position: -0px -64px; width: 64px; height: 64px; }
+    </style>
+
+</head>
+<body>
+
+<div id="content">
+    <input type="range" min="0" max="10" id="range_filler"/>
+</div>
+
+<script type="text/javascript" src="jquery-3.2.1.js" ></script>
+<script type="text/javascript" src="src/range_filler.js" ></script>
+<script>
+    let rf = new RangeFiller($('#range_filler'), 'star1', 'star2');
+    rf.transform();
+</script>
+
+</body>
+</html>
